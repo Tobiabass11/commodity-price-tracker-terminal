@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: commodity-price-tracker-api
+    runtime: node
+    plan: free
+    rootDir: .
+    buildCommand: npm ci && npm run build --workspace @commodity-tracker/api
+    startCommand: npm run start --workspace @commodity-tracker/api
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8080
+      - key: ALLOWED_ORIGIN
+        sync: false
+      - key: ALPHA_VANTAGE_API_KEY
+        sync: false
+      - key: NEWS_API_KEY
+        sync: false
