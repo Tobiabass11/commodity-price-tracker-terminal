@@ -71,7 +71,7 @@ npm run dev
 
 1. Create a Render Web Service from this repo.
 2. Use `render.yaml` or equivalent settings:
-- Build command: `npm ci && npm run build --workspace @commodity-tracker/api`
+- Build command: `npm ci --include=dev && npm run build --workspace @commodity-tracker/api`
 - Start command: `npm run start --workspace @commodity-tracker/api`
 3. Set env vars: `ALPHA_VANTAGE_API_KEY`, `NEWS_API_KEY`, `ALLOWED_ORIGIN`.
 

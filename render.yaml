@@ -4,7 +4,7 @@ services:
     runtime: node
     plan: free
     rootDir: .
-    buildCommand: npm ci && npm run build --workspace @commodity-tracker/api
+    buildCommand: npm ci --include=dev && npm run build --workspace @commodity-tracker/api
     startCommand: npm run start --workspace @commodity-tracker/api
     healthCheckPath: /health
     envVars:
