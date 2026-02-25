@@ -1,6 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "npm ci && npm run build --workspace @commodity-tracker/web",
+  "installCommand": "npm ci --include=dev",
+  "buildCommand": "npm run build --workspace apps/web",
   "outputDirectory": "apps/web/dist",
   "framework": "vite"
 }
