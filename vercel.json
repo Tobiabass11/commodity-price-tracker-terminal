@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "installCommand": "npm ci --include=dev",
-  "buildCommand": "npm run build --workspace apps/web",
-  "outputDirectory": "apps/web/dist",
+  "installCommand": "if [ -f ../../package.json ]; then cd ../..; fi; npm ci --include=dev",
+  "buildCommand": "if [ -f ../../package.json ]; then cd ../..; fi; npm run build --workspace @commodity-tracker/web",
+  "outputDirectory": "dist",
   "framework": "vite"
 }
